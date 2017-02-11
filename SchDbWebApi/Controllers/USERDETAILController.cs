@@ -64,8 +64,9 @@ namespace SchDbWebApi.Controllers
         [HttpPut]
         [ActionName("userupdate")]
         [Route("api/USERDETAIL/userupdate")]
-        public void userupdate(USERMODEL UM)
+        public string userupdate(USERMODEL UM)
         {
+            string updatecount;
             using (SqlConnection connection = new SqlConnection(connectionstring))
             {
                 connection.Open();
@@ -93,13 +94,14 @@ namespace SchDbWebApi.Controllers
                     command.Parameters.AddWithValue("@USRMODIFIEDDATE", UM.usrmodifieddate);
                     command.Parameters.AddWithValue("@USRSTATUS", UM.usrstatus);
                     command.Parameters.AddWithValue("@USROID", UM.usroid);
-                    command.ExecuteNonQuery();
+                    updatecount = command.ExecuteNonQuery().ToString();
                 }
                 catch (Exception ex)
                 {
-                    throw ex;
+                    updatecount = ex.ToString();
                 }
             }
+            return updatecount;
         }
 
 
