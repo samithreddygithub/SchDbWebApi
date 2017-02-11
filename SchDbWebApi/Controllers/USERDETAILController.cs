@@ -119,7 +119,7 @@ namespace SchDbWebApi.Controllers
                 connection.Open();
                 try
                 {
-                    SqlCommand command = new SqlCommand("USERDETAILS_CRUD", connection);
+                    SqlCommand command = new SqlCommand("USERTABLEDETAILS_CRUD", connection);
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@TRANSACTION_TYPE", "R");
                     SqlDataReader sdatareader = null;
@@ -172,7 +172,7 @@ namespace SchDbWebApi.Controllers
                 connection.Open();
                 try
                 {
-                    SqlCommand command = new SqlCommand("USERDETAILS_CRUD", connection);
+                    SqlCommand command = new SqlCommand("USERTABLEDETAILS_CRUD", connection);
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@TRANSACTION_TYPE", "R");
                     command.Parameters.AddWithValue("@USRID", id);
