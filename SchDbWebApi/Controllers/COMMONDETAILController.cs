@@ -51,7 +51,7 @@ namespace SchDbWebApi.Controllers
         }
 
         //Update
-        [HttpPost]
+        [HttpPut]
         [ActionName("classsectionupdate")]
         [Route("api/COMMONDETAIL/classsectionupdate")]
         public string classsectionupdate(CLASSSECTIONMODEL CSM)
@@ -204,7 +204,7 @@ namespace SchDbWebApi.Controllers
         }
 
         //Update
-        [HttpPost]
+        [HttpPut]
         [ActionName("classsubjectstaffupdate")]
         [Route("api/COMMONDETAIL/classsubjectstaffupdate")]
         public string classsubjectstaffupdate(CLASSSUBJECTMODEL CSSM)
@@ -282,7 +282,7 @@ namespace SchDbWebApi.Controllers
         //Read id
         [HttpGet]
         [ActionName("classsubjectstaffread")]
-        [Route("api/COMMONDETAIL/classsubjectstaffread")]
+        [Route("api/COMMONDETAIL/classsubjectstaffread/{id}")]
         public List<CLASSSUBJECTMODEL> classsubjectstaffread(int id)
         {
             CLASSSUBJECTMODEL CSSM = new CLASSSUBJECTMODEL();
