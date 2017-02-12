@@ -262,9 +262,9 @@ namespace SchDbWebApi.Controllers
                         LCSSM.Add(new CLASSSUBJECTMODEL()
                         {
                             csubid = Convert.ToInt32(sdatareader["CSUBID"]),
-                            csubclasssectionid = Convert.ToInt32(sdatareader["CSUBCLASSSECTIONID"]),
+                            csubclasssectionid = sdatareader["CSUBCLASSSECTIONID"].ToString(),
                             csubsubjectname = sdatareader["CSUBSUBJECTNAME"].ToString(),
-                            csstaffnameid = Convert.ToInt32(sdatareader["CSUBSTAFFNAMEID"]),
+                            csstaffnameid = sdatareader["CSUBSTAFFNAMEID"].ToString(),
                             csubcreateddate = sdatareader["CSUBCREATEDDATE"].ToString(),
                             csubmodifieddate = sdatareader["CSUBMODIFIEDDATE"].ToString(),
                             csuboid = Convert.ToInt32(sdatareader["CSUBOID"])
@@ -305,9 +305,9 @@ namespace SchDbWebApi.Controllers
                         LCSSM.Add(new CLASSSUBJECTMODEL()
                         {
                             csubid = Convert.ToInt32(sdatareader["CSUBID"]),
-                            csubclasssectionid = Convert.ToInt32(sdatareader["CSUBCLASSSECTIONID"]),
+                            csubclasssectionid = sdatareader["CSUBCLASSSECTIONID"].ToString(),
                             csubsubjectname = sdatareader["CSUBSUBJECTNAME"].ToString(),
-                            csstaffnameid = Convert.ToInt32(sdatareader["CSUBSTAFFNAMEID"]),
+                            csstaffnameid = sdatareader["CSUBSTAFFNAMEID"].ToString(),
                             csubcreateddate = sdatareader["CSUBCREATEDDATE"].ToString(),
                             csubmodifieddate = sdatareader["CSUBMODIFIEDDATE"].ToString(),
                             csuboid = Convert.ToInt32(sdatareader["CSUBOID"])

@@ -23,9 +23,9 @@ namespace SchDbWebApi.Models
     public class CLASSSUBJECTMODEL
     {
         public int csubid { get; set; }
-        public int csubclasssectionid { get; set; }
+        public string csubclasssectionid { get; set; }
         public string csubsubjectname { get; set; }
-        public int csstaffnameid { get; set; }
+        public string csstaffnameid { get; set; }
         public string csubcreateddate { get; set; }
         public string csubmodifieddate { get; set; }
         public string csubstatus { get; set; }
