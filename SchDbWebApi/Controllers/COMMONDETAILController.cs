@@ -185,7 +185,7 @@ namespace SchDbWebApi.Controllers
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@TABLE_NAME", "CLASSSUBJECTTABLE");
                     command.Parameters.AddWithValue("@TRANSACTION_TYPE", "C");
-                    command.Parameters.AddWithValue("@CSUBOID", "");
+                    command.Parameters.AddWithValue("@CSUBID", "");
                     command.Parameters.AddWithValue("@CSUBCLASSSECTIONID", CSSM.csubclasssectionid);
                     command.Parameters.AddWithValue("@CSUBSUBJECTNAME", CSSM.csubsubjectname);
                     command.Parameters.AddWithValue("@CSUBSTAFFNAMEID", CSSM.csstaffnameid);
