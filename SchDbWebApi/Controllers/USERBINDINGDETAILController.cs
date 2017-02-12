@@ -105,9 +105,9 @@ namespace SchDbWebApi.Controllers
                         LUBM.Add(new USERBINDINGMODEL()
                         {
                             buid = Convert.ToInt32(sdatareader["BUID"]),
-                            bustudentid = Convert.ToInt32(sdatareader["BUSTUDENTID"]),
-                            buparentid = Convert.ToInt32(sdatareader["BUPARENTID"]),
-                            buclasssectionid = Convert.ToInt32(sdatareader["BUCLASSSECTIONID"]),
+                            bustudentid = sdatareader["BUSTUDENTID"].ToString(),
+                            buparentid = sdatareader["BUPARENTID"].ToString(),
+                            buclasssectionid = sdatareader["BUCLASSSECTIONID"].ToString(),
                             bucreateddate = sdatareader["BUCREATEDDATE"].ToString(),
                             bumodifieddate = sdatareader["BUMODIFIEDDATE"].ToString(),
                             bustatus = sdatareader["BUSTATUS"].ToString(),
@@ -148,9 +148,9 @@ namespace SchDbWebApi.Controllers
                         LUBM.Add(new USERBINDINGMODEL()
                         {
                             buid = Convert.ToInt32(sdatareader["BUID"]),
-                            bustudentid = Convert.ToInt32(sdatareader["BUSTUDENTID"]),
-                            buparentid = Convert.ToInt32(sdatareader["BUPARENTID"]),
-                            buclasssectionid = Convert.ToInt32(sdatareader["BUCLASSSECTIONID"]),
+                            bustudentid = sdatareader["BUSTUDENTID"].ToString(),
+                            buparentid = sdatareader["BUPARENTID"].ToString(),
+                            buclasssectionid = sdatareader["BUCLASSSECTIONID"].ToString(),
                             bucreateddate = sdatareader["BUCREATEDDATE"].ToString(),
                             bumodifieddate = sdatareader["BUMODIFIEDDATE"].ToString(),
                             bustatus = sdatareader["BUSTATUS"].ToString(),

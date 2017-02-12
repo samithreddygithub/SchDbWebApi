@@ -8,9 +8,9 @@ namespace SchDbWebApi.Models
     public class USERBINDINGMODEL
     {
         public int buid { get; set; }
-        public int bustudentid { get; set; }
-        public int buparentid { get; set; }
-        public int buclasssectionid { get; set; }
+        public string bustudentid { get; set; }
+        public string buparentid { get; set; }
+        public string buclasssectionid { get; set; }
         public string bucreateddate { get; set; }
         public string bumodifieddate { get; set; }
         public string bustatus { get; set; }
