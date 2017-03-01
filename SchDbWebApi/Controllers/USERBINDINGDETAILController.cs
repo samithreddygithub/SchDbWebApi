@@ -84,7 +84,7 @@ namespace SchDbWebApi.Controllers
         //Read
         [HttpGet]
         [ActionName("userbindingread")]
-        [Route("api/COMMONDETAIL/userbindingread")]
+        [Route("api/USERBINDINGDETAIL/userbindingread")]
         public List<USERBINDINGMODEL> userbindingread()
         {
             USERBINDINGMODEL UBM = new USERBINDINGMODEL();
@@ -126,7 +126,7 @@ namespace SchDbWebApi.Controllers
         //Read id
         [HttpGet]
         [ActionName("userbindingread")]
-        [Route("api/COMMONDETAIL/userbindingread/{id}")]
+        [Route("api/USERBINDINGDETAIL/userbindingread/{id}")]
         public List<USERBINDINGMODEL> userbindingread(int id)
         {
             USERBINDINGMODEL UBM = new USERBINDINGMODEL();
