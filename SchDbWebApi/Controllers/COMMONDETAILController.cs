@@ -112,6 +112,7 @@ namespace SchDbWebApi.Controllers
                             cssectionname = sdatareader["CSSECTIONNAME"].ToString(),
                             cscreateddate = sdatareader["CSCREATEDDATE"].ToString(),
                             csmodifieddate = sdatareader["CSMODIFIEDDATE"].ToString(),
+                            csstatus = sdatareader["CSSTATUS"].ToString(),
                             csoid = Convert.ToInt32(sdatareader["CSOID"])
                         });
                     }
@@ -154,6 +155,7 @@ namespace SchDbWebApi.Controllers
                             cssectionname = sdatareader["CSSECTIONNAME"].ToString(),
                             cscreateddate = sdatareader["CSCREATEDDATE"].ToString(),
                             csmodifieddate = sdatareader["CSMODIFIEDDATE"].ToString(),
+                            csstatus = sdatareader["CSSTATUS"].ToString(),
                             csoid = Convert.ToInt32(sdatareader["CSOID"])
                         });
                     }
@@ -267,6 +269,7 @@ namespace SchDbWebApi.Controllers
                             csstaffnameid = sdatareader["CSUBSTAFFNAMEID"].ToString(),
                             csubcreateddate = sdatareader["CSUBCREATEDDATE"].ToString(),
                             csubmodifieddate = sdatareader["CSUBMODIFIEDDATE"].ToString(),
+                            csubstatus = sdatareader["CSUBSTATUS"].ToString(),
                             csuboid = Convert.ToInt32(sdatareader["CSUBOID"])
                         });
                     }
@@ -310,6 +313,7 @@ namespace SchDbWebApi.Controllers
                             csstaffnameid = sdatareader["CSUBSTAFFNAMEID"].ToString(),
                             csubcreateddate = sdatareader["CSUBCREATEDDATE"].ToString(),
                             csubmodifieddate = sdatareader["CSUBMODIFIEDDATE"].ToString(),
+                            csubstatus = sdatareader["CSUBSTATUS"].ToString(),
                             csuboid = Convert.ToInt32(sdatareader["CSUBOID"])
                         });
                     }
