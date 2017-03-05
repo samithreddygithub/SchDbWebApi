@@ -123,12 +123,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\CLASSSUBJECTMARKSController.cs" />
     <Compile Include="Controllers\COMMONDETAILController.cs" />
     <Compile Include="Controllers\USERBINDINGDETAILController.cs" />
     <Compile Include="Controllers\USERDETAILController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CLASSSUBJECTMARKS.cs" />
     <Compile Include="Models\COMMONMODEL.cs" />
     <Compile Include="Models\USERBINDINGMODEL.cs" />
     <Compile Include="Models\USERMODEL.cs" />
