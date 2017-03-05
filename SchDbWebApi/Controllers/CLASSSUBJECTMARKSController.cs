@@ -10,7 +10,7 @@ using System.Web.Http;
 
 namespace SchDbWebApi.Controllers
 {
-    public class CLASSSUBJECTMARKSController
+    public class CLASSSUBJECTMARKSController : ApiController
     {
         string connectionstring = ConfigurationManager.ConnectionStrings["SCHDBWEBAPI"].ConnectionString;
 
