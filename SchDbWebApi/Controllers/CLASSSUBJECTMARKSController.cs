@@ -94,5 +94,35 @@ namespace SchDbWebApi.Controllers
         }
 
 
+        //Create or Update
+        [HttpPost]
+        [ActionName("classsubjectstudentmark")]
+        [Route("api/CLASSSUBJECTMARKS/classsubjectstudentmark")]
+        public string classsubjectstudentmark(CLASSSUBJECTSTUDENTMARK CSSM)
+        {
+            string savedcount;
+            using (SqlConnection connection = new SqlConnection(connectionstring))
+            {
+                connection.Open();
+                try
+                {
+                    SqlCommand command = new SqlCommand("CLASSSUBJECTSTUDENTMARK_CRUD", connection);
+                    command.CommandType = CommandType.StoredProcedure;                   
+                    command.Parameters.AddWithValue("@CSSMID", "");
+                    command.Parameters.AddWithValue("@CLASSID", CSSM.classid);
+                    command.Parameters.AddWithValue("@TESTID", CSSM.testid.Trim());
+                    command.Parameters.AddWithValue("@STUDENTID", CSSM.studentid);
+                    command.Parameters.AddWithValue("@SUBJECTID", CSSM.subjectid);
+                    command.Parameters.AddWithValue("@MARKS", CSSM.marks);                    
+                    savedcount = command.ExecuteNonQuery().ToString();
+                }
+                catch (Exception ex)
+                {
+                    savedcount = ex.ToString();
+                }
+            }
+            return savedcount;
+        }
+
     }
 }
