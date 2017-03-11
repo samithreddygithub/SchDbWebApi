@@ -34,8 +34,8 @@ namespace SchDbWebApi.Controllers
                     command.Parameters.AddWithValue("@TABLE_NAME", "CLASSSECTIONTABLE");
                     command.Parameters.AddWithValue("@TRANSACTION_TYPE", "C");
                     command.Parameters.AddWithValue("@CSID", "");
-                    command.Parameters.AddWithValue("@CSCLASSNAME", CSM.csclassname);
-                    command.Parameters.AddWithValue("@CSSECTIONNAME", CSM.cssectionname);
+                    command.Parameters.AddWithValue("@CSCLASSNAME", CSM.csclassname.Trim());
+                    command.Parameters.AddWithValue("@CSSECTIONNAME", CSM.cssectionname.Trim());
                     command.Parameters.AddWithValue("@CREATEDDATE", CSM.cscreateddate);
                     command.Parameters.AddWithValue("@MODIFIEDDATE", CSM.csmodifieddate);
                     command.Parameters.AddWithValue("@STATUS", CSM.csstatus);
@@ -67,8 +67,8 @@ namespace SchDbWebApi.Controllers
                     command.Parameters.AddWithValue("@TABLE_NAME", "CLASSSECTIONTABLE");
                     command.Parameters.AddWithValue("@TRANSACTION_TYPE", "U");
                     command.Parameters.AddWithValue("@CSID", CSM.csid);
-                    command.Parameters.AddWithValue("@CSCLASSNAME", CSM.csclassname);
-                    command.Parameters.AddWithValue("@CSSECTIONNAME", CSM.cssectionname);
+                    command.Parameters.AddWithValue("@CSCLASSNAME", CSM.csclassname.Trim());
+                    command.Parameters.AddWithValue("@CSSECTIONNAME", CSM.cssectionname.Trim());
                     command.Parameters.AddWithValue("@CREATEDDATE", CSM.cscreateddate);
                     command.Parameters.AddWithValue("@MODIFIEDDATE", CSM.csmodifieddate);
                     command.Parameters.AddWithValue("@STATUS", CSM.csstatus);
@@ -188,9 +188,9 @@ namespace SchDbWebApi.Controllers
                     command.Parameters.AddWithValue("@TABLE_NAME", "CLASSSUBJECTTABLE");
                     command.Parameters.AddWithValue("@TRANSACTION_TYPE", "C");
                     command.Parameters.AddWithValue("@CSUBID", "");
-                    command.Parameters.AddWithValue("@CSUBCLASSSECTIONID", CSSM.csubclasssectionid);
-                    command.Parameters.AddWithValue("@CSUBSUBJECTNAME", CSSM.csubsubjectname);
-                    command.Parameters.AddWithValue("@CSUBSTAFFNAMEID", CSSM.csstaffnameid);
+                    command.Parameters.AddWithValue("@CSUBCLASSSECTIONID", CSSM.csubclasssectionid.Trim());
+                    command.Parameters.AddWithValue("@CSUBSUBJECTNAME", CSSM.csubsubjectname.Trim());
+                    command.Parameters.AddWithValue("@CSUBSTAFFNAMEID", CSSM.csstaffnameid.Trim());
                     command.Parameters.AddWithValue("@CREATEDDATE", CSSM.csubcreateddate);
                     command.Parameters.AddWithValue("@MODIFIEDDATE", CSSM.csubmodifieddate);
                     command.Parameters.AddWithValue("@STATUS", CSSM.csubstatus);
@@ -222,9 +222,9 @@ namespace SchDbWebApi.Controllers
                     command.Parameters.AddWithValue("@TABLE_NAME", "CLASSSUBJECTTABLE");
                     command.Parameters.AddWithValue("@TRANSACTION_TYPE", "U");
                     command.Parameters.AddWithValue("@CSUBID", CSSM.csubid);
-                    command.Parameters.AddWithValue("@CSUBCLASSSECTIONID", CSSM.csubclasssectionid);
-                    command.Parameters.AddWithValue("@CSUBSUBJECTNAME", CSSM.csubsubjectname);
-                    command.Parameters.AddWithValue("@CSUBSTAFFNAMEID", CSSM.csstaffnameid);
+                    command.Parameters.AddWithValue("@CSUBCLASSSECTIONID", CSSM.csubclasssectionid.Trim());
+                    command.Parameters.AddWithValue("@CSUBSUBJECTNAME", CSSM.csubsubjectname.Trim());
+                    command.Parameters.AddWithValue("@CSUBSTAFFNAMEID", CSSM.csstaffnameid.Trim());
                     command.Parameters.AddWithValue("@CREATEDDATE", CSSM.csubcreateddate);
                     command.Parameters.AddWithValue("@MODIFIEDDATE", CSSM.csubmodifieddate);
                     command.Parameters.AddWithValue("@STATUS", CSSM.csubstatus);
