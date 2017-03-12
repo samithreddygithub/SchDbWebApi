@@ -33,4 +33,15 @@ namespace SchDbWebApi.Models
         public int marks { get; set; }
     }
 
+    public class CLASSSUBJECTSTUDENTMARKREAD
+    {
+        public int classid { get; set; }
+        public string testid { get; set; }
+        public int studentid { get; set; }
+        public string studentname { get; set; }
+        public int subjectid { get; set; }
+        public string subjectname { get; set; }
+        public int marks { get; set; }
+    }
+
 }

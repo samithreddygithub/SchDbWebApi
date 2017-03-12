@@ -124,5 +124,48 @@ namespace SchDbWebApi.Controllers
             return savedcount;
         }
 
+        //Read Class Subject Student Marks
+        [HttpGet]
+        [ActionName("classsubjectstudentmarkread")]
+        [Route("api/CLASSSUBJECTMARKS/classsubjectstudentmarkread/{classid}/{testid}")]
+        public List<CLASSSUBJECTSTUDENTMARKREAD> classsubjectstudentmarkread(int classid,string testid)
+        {
+            CLASSSUBJECTSTUDENTMARKREAD CSSMR = new CLASSSUBJECTSTUDENTMARKREAD();
+            List<CLASSSUBJECTSTUDENTMARKREAD> LCSSMR = new List<CLASSSUBJECTSTUDENTMARKREAD>();
+
+            using (SqlConnection connection = new SqlConnection(connectionstring))
+            {
+                connection.Open();
+                try
+                {
+                    SqlCommand command = new SqlCommand("CLASSSUBJECTSTUDENTMARK_READ", connection);
+                    command.CommandType = CommandType.StoredProcedure;                    
+                    command.Parameters.AddWithValue("@CLASSID", classid);
+                    command.Parameters.AddWithValue("@TESTID", testid);
+                    SqlDataReader sdatareader = null;
+                    sdatareader = command.ExecuteReader();
+                    while (sdatareader.Read())
+                    {
+                        LCSSMR.Add(new CLASSSUBJECTSTUDENTMARKREAD()
+                        {
+                            classid = Convert.ToInt32(sdatareader["CSID"]),
+                            testid = sdatareader["TESTID"].ToString(),
+                            studentid = Convert.ToInt32(sdatareader["USRID"]),
+                            studentname = sdatareader["USRFULLNAME"].ToString(),
+                            subjectid = Convert.ToInt32(sdatareader["SUBJECTID"]),
+                            subjectname = sdatareader["CSUBSUBJECTNAME"].ToString(),
+                            marks = Convert.ToInt32(sdatareader["MARKS"])
+                        });
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                return LCSSMR;
+            }
+
+        }
+
     }
 }
